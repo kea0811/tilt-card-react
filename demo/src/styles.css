@@ -1,0 +1,445 @@
+:root {
+  --bg: #0a0d14;
+  --bg-soft: #10141f;
+  --panel: #151a29;
+  --panel-2: #1b2136;
+  --line: rgba(148, 163, 199, 0.16);
+  --ink: #eef1f8;
+  --muted: #9aa5c0;
+  --accent: #7c8cff;
+  --accent-2: #4fd1c5;
+  --glow: rgba(124, 140, 255, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1100px 500px at 70% -10%, rgba(124, 140, 255, 0.14), transparent 60%),
+    radial-gradient(900px 420px at 10% 30%, rgba(79, 209, 197, 0.08), transparent 55%),
+    var(--bg);
+  line-height: 1.6;
+}
+
+code,
+pre {
+  font-family: 'SF Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 88px 24px 40px;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  margin: 0 0 14px;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(40px, 7vw, 68px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  background: linear-gradient(100deg, #eef1f8 20%, #7c8cff 60%, #4fd1c5 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-tagline {
+  margin: 18px auto 0;
+  max-width: 560px;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.hero-tagline strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.hero-install {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 12px 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-soft);
+  color: var(--accent-2);
+  font-size: 15px;
+  box-shadow: 0 0 34px var(--glow);
+}
+
+.hero-hint {
+  margin: 26px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ---------- layout ---------- */
+
+.page {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+}
+
+.section {
+  margin: 72px 0;
+}
+
+.section-title {
+  margin: 0 0 8px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.section-sub {
+  margin: 0 0 28px;
+  max-width: 640px;
+  font-size: 15.5px;
+  color: var(--muted);
+}
+
+.inline-code {
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  color: var(--accent-2);
+  font-size: 0.86em;
+}
+
+.section-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .section-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- showcase holo card ---------- */
+
+.showcase {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 8px;
+}
+
+.holo {
+  width: min(460px, 100%);
+  min-height: 300px;
+  padding: 30px 32px 28px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(140deg, rgba(124, 140, 255, 0.16), rgba(79, 209, 197, 0.07) 55%, transparent),
+    var(--panel);
+  box-shadow:
+    0 24px 60px rgba(3, 6, 18, 0.6),
+    0 0 44px var(--glow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.holo-blob {
+  position: absolute;
+  top: -70px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 140, 255, 0.34), transparent 70%);
+  filter: blur(6px);
+}
+
+.holo-badge {
+  align-self: flex-start;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(79, 209, 197, 0.45);
+  background: rgba(79, 209, 197, 0.1);
+  color: var(--accent-2);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+}
+
+.holo-title {
+  margin: 4px 0 0;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.holo-sub {
+  margin: 0;
+  max-width: 330px;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+
+.holo-code {
+  color: var(--accent-2);
+  font-size: 0.9em;
+}
+
+.holo-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.holo-chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* ---------- variants grid ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.tile {
+  padding: 24px 22px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, var(--panel-2), var(--panel) 70%);
+  box-shadow: 0 14px 34px rgba(3, 6, 18, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 190px;
+}
+
+.tile-glyph {
+  font-size: 30px;
+  line-height: 1;
+  color: var(--accent);
+  text-shadow: 0 0 18px var(--glow);
+}
+
+.tile-title {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.tile-note {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--muted);
+  flex-grow: 1;
+}
+
+.tile-code {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--accent-2);
+}
+
+/* ---------- hook playground ---------- */
+
+.hook-stage {
+  margin: 0;
+  padding: 26px;
+  border-radius: 18px;
+  border: 1px dashed rgba(124, 140, 255, 0.4);
+  background: var(--bg-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hook-label {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hook-readout {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 18px;
+  align-items: baseline;
+}
+
+.hook-axis {
+  font-size: 13px;
+  color: var(--muted);
+  font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+
+.hook-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+
+/* ---------- gyro panel ---------- */
+
+.gyro-panel {
+  padding: 26px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.gyro-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.gyro-copy {
+  margin: 0 0 18px;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+
+.gyro-button {
+  padding: 11px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(124, 140, 255, 0.5);
+  background: linear-gradient(120deg, rgba(124, 140, 255, 0.25), rgba(79, 209, 197, 0.18));
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 160ms ease;
+}
+
+.gyro-button:hover:not(:disabled) {
+  box-shadow: 0 0 24px var(--glow);
+}
+
+.gyro-button:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+.gyro-button:disabled {
+  cursor: default;
+  opacity: 0.75;
+}
+
+.gyro-status {
+  margin: 14px 0 0;
+  font-size: 13.5px;
+  color: var(--accent-2);
+}
+
+/* ---------- notes & code ---------- */
+
+.motion-note {
+  padding: 26px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+
+.motion-note .section-sub {
+  margin-bottom: 0;
+}
+
+.codeblock {
+  margin: 0 0 16px;
+  padding: 20px 24px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #0d1119;
+  overflow-x: auto;
+}
+
+.codeblock-code {
+  color: #c6d0ea;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+}
+
+.footer-text {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 26px 24px 34px;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.footer-name {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.footer-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  text-decoration: underline;
+  color: var(--accent-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gyro-button {
+    transition: none;
+  }
+}
