@@ -1,6 +1,11 @@
 # tilt-card-react
 
 ![tests](https://img.shields.io/badge/tests-passing-brightgreen.svg) ![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
+![npm version](https://img.shields.io/npm/v/tilt-card-react.svg)
+![npm downloads](https://img.shields.io/npm/dm/tilt-card-react.svg)
+![bundle size](https://img.shields.io/bundlephobia/minzip/tilt-card-react?label=gzip)
+
+**🌐 [Live demo →](https://tilt-card-react.vercel.app)**
 
 3D parallax tilt for React — the card leans toward the pointer on desktop and follows the **gyroscope on mobile**. Glare that tracks the cursor, child layers that float at their own depth, and reduced-motion manners built in. Zero dependencies, ~1.6 kB gzipped, works with React 18 and 19.
 
